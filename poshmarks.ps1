@@ -31,3 +31,12 @@ function mdump{
 function l{
     $marks
 }
+
+function gpush($number) {
+    pushd $marks["$number"]
+}
+
+function sln($number){
+    g($number);
+    gci *.sln | select -f 1 | ii
+}
